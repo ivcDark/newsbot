@@ -6,6 +6,7 @@ import (
 	"github.com/ivcDark/newsbot/internal/domain"
 	"log"
 	"net/http"
+	"strings"
 	"time"
 )
 
@@ -18,9 +19,22 @@ type NewsItem struct {
 	Content  string
 }
 
-func ParseNews() ([]NewsItem, error) {
-	url := "https://63.ru/text/"
+var monthMap = map[string]string{
+	"января":   "January",
+	"февраля":  "February",
+	"марта":    "March",
+	"апреля":   "April",
+	"мая":      "May",
+	"июня":     "June",
+	"июля":     "July",
+	"августа":  "August",
+	"сентября": "September",
+	"октября":  "October",
+	"ноября":   "November",
+	"декабря":  "December",
+}
 
+func FetchHeadlines(url string) ([]NewsItem, error) {
 	resp, err := http.Get(url)
 	if err != nil {
 		return nil, fmt.Errorf("Request error: %s", err)
@@ -60,6 +74,8 @@ func ParseNews() ([]NewsItem, error) {
 }
 
 func getArticleText(link string) string {
+	var contentBuilder strings.Builder
+
 	resp, err := http.Get(link)
 	if err != nil {
 		log.Printf("Ошибка загрузки статьи %s: %v", link, err)
@@ -75,21 +91,23 @@ func getArticleText(link string) string {
 
 	doc, err := goquery.NewDocumentFromReader(resp.Body)
 	if err != nil {
-		log.Printf("Ошибка парсинга html статьи: %v", err)
+		log.Printf("Ошибка парсинга html статьи (%s): %v", link, err)
 		return ""
 	}
 
-	content := ""
-
 	doc.Find("div.uiArticleBlockText_5xJo1").Each(func(i int, s *goquery.Selection) {
-		content += s.Text()
+		contentBuilder.WriteString(s.Text())
 	})
 
-	return content
+	return contentBuilder.String()
 }
 
-func (ni NewsItem) ToDomain() *domain.News {
-	publishedTime, _ := time.Parse("02 января 2006", ni.Date) // можешь поменять формат если сайт другой
+func (ni NewsItem) ToDomain() (*domain.News, error) {
+	publishedTime, err := time.Parse("02 January, 2006, 15:04", normalizeDateString(ni.Date))
+	if err != nil {
+		return nil, fmt.Errorf("ошибка разбора даты '%s': %w", ni.Date, err)
+	}
+
 	return &domain.News{
 		Title:     ni.Title,
 		Subtitle:  ni.Subtitle,
@@ -97,5 +115,14 @@ func (ni NewsItem) ToDomain() *domain.News {
 		Image:     ni.Image,
 		Content:   ni.Content,
 		Published: publishedTime,
+	}, nil
+}
+
+func normalizeDateString(s string) string {
+	for ru, en := range monthMap {
+		if strings.Contains(s, ru) {
+			s = strings.Replace(s, ru, en, 1)
+		}
 	}
+	return s
 }
