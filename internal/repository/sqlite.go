@@ -92,3 +92,37 @@ func (r *SQLiteNewsRepository) ExistsByURL(url string) (bool, error) {
 	}
 	return count > 0, nil
 }
+
+func (r *SQLiteNewsRepository) GetUnpublished() ([]*domain.News, error) {
+	rows, err := r.db.Query("SELECT id, title, subtitle, url, image_url, content, published, created_at FROM news WHERE is_published = false")
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var results []*domain.News
+	for rows.Next() {
+		var newsItem domain.News
+		err := rows.Scan(
+			&newsItem.ID,
+			&newsItem.Title,
+			&newsItem.Subtitle,
+			&newsItem.URL,
+			&newsItem.Image,
+			&newsItem.Content,
+			&newsItem.Published,
+			&newsItem.CreatedAt,
+		)
+		if err != nil {
+			return nil, err
+		}
+		results = append(results, &newsItem)
+	}
+
+	return results, nil
+}
+
+func (r *SQLiteNewsRepository) MarkAsPublished(id int64) error {
+	_, err := r.db.Exec("UPDATE news SET is_published = true WHERE id = ?", id)
+	return err
+}
