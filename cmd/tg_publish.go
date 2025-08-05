@@ -6,6 +6,7 @@ import (
 	"github.com/ivcDark/newsbot/internal/telegram"
 	"github.com/spf13/cobra"
 	"log"
+	"os"
 	"strconv"
 	"time"
 )
@@ -14,13 +15,23 @@ var tgPublishCmd = &cobra.Command{
 	Use:   "tg_publish",
 	Short: "Публикация новостей в Telegram",
 	Run: func(cmd *cobra.Command, args []string) {
-		db, err := sql.Open("sqlite3", "./newsbot.db")
+		driver := os.Getenv("DB_DRIVER")
+		dsn := os.Getenv("DB_DSN")
+
+		if driver == "" || dsn == "" {
+			log.Fatal("DB_DRIVER и DB_DSN должны быть установлены в переменных окружения")
+		}
+
+		db, err := sql.Open(driver, dsn)
 		if err != nil {
-			log.Fatalf("Ошибка при подключении БД: %v", err)
+			log.Fatalf("Ошибка при подключении к БД: %v", err)
 		}
 		defer db.Close()
 
-		newsRepo := repository.NewSQLiteNewsRepository(db)
+		newsRepo, err := repository.NewRepository(driver, db)
+		if err != nil {
+			log.Fatalf("Ошибка инициализации репозитория: %v", err)
+		}
 
 		idStr, _ := cmd.Flags().GetString("id")
 

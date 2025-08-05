@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: news_pg
+    environment:
+      POSTGRES_DB: newsbot
+      POSTGRES_USER: newsbot
+      POSTGRES_PASSWORD: newsbot
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  app:
+    build: ./
+    container_name: news_app
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    working_dir: /app
+    tty: true
+    stdin_open: true
+
+volumes:
+  pgdata:

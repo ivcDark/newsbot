@@ -1,0 +1,2 @@
+*/1 * * * * sh -c '/usr/local/bin/newsbot fetch >> /proc/1/fd/1 2>&1'
+*/1 * * * * sh -c '/usr/local/bin/newsbot tg_publish >> /proc/1/fd/1 2>&1'

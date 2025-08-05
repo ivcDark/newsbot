@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"strings"
 	"time"
+	"unicode"
 )
 
 type NewsItem struct {
@@ -103,7 +104,7 @@ func getArticleText(link string) string {
 }
 
 func (ni NewsItem) ToDomain() (*domain.News, error) {
-	publishedTime, err := time.Parse("02 January, 2006, 15:04", normalizeDateString(ni.Date))
+	publishedTime, err := time.Parse("2 January, 2006, 15:04", normalizeDateString(ni.Date))
 	if err != nil {
 		return nil, fmt.Errorf("ошибка разбора даты '%s': %w", ni.Date, err)
 	}
@@ -119,6 +120,16 @@ func (ni NewsItem) ToDomain() (*domain.News, error) {
 }
 
 func normalizeDateString(s string) string {
+	// Убираем неразрывные пробелы и прочие невидимые символы
+	s = strings.Map(func(r rune) rune {
+		if unicode.IsSpace(r) {
+			return ' '
+		}
+		return r
+	}, s)
+
+	s = strings.ToLower(strings.TrimSpace(s))
+
 	for ru, en := range monthMap {
 		if strings.Contains(s, ru) {
 			s = strings.Replace(s, ru, en, 1)

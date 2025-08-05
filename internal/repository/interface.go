@@ -7,4 +7,6 @@ type NewsRepository interface {
 	GetAll() ([]*domain.News, error)
 	GetById(id int64) (*domain.News, error)
 	ExistsByURL(url string) (bool, error)
+	GetUnpublished() ([]*domain.News, error)
+	MarkAsPublished(id int64) error
 }

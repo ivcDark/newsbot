@@ -1,0 +1,5 @@
+# Каждые 3 минуты: парсинг новостей
+*/1 * * * * /usr/local/bin/newsbot fetch >> /proc/1/fd/1 2>&1
+
+# Каждые 5 минут: публикация новостей
+*/1 * * * * /usr/local/bin/newsbot tg_publish >> /proc/1/fd/1 2>&1

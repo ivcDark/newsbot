@@ -1,0 +1,197 @@
+crond: crond (busybox 1.37.0) started, log level 8
+crond: USER root pid   7 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  23 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  24 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  25 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  26 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  27 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  28 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  29 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  30 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  31 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  32 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  33 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  34 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  35 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  36 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  37 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  38 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  39 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  40 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  41 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  42 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  43 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  44 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  45 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  46 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: crond (busybox 1.37.0) started, log level 8
+crond: USER root pid   7 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid   8 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid   9 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  10 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  11 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  39 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  40 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: crond (busybox 1.37.0) started, log level 8
+crond: USER root pid   7 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: crond (busybox 1.37.0) started, log level 8
+crond: USER root pid  19 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+crond: USER root pid  20 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+/bin/sh: redir error
+crond: crond (busybox 1.37.0) started, log level 8
+crond: USER root pid  26 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  27 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: crond (busybox 1.37.0) started, log level 8
+crond: USER root pid   7 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid   8 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid   9 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  10 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  11 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  12 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  13 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  14 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  15 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  47 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  48 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  49 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: crond (busybox 1.37.0) started, log level 8
+crond: USER root pid  26 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: crond: USER root pid  27 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+redir error
+/bin/sh: redir error
+crond: USER root pid  28 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  29 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  30 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  31 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  32 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  33 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  34 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+crond: USER root pid  35 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: /bin/sh: redir errorredir error
+
+crond: USER root pid  36 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  37 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  38 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  39 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  40 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  41 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  42 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  43 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  44 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  45 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  46 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  47 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  48 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  49 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  50 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+crond: USER root pid  51 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+/bin/sh: redir error
+crond: USER root pid  52 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  53 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid  54 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: crond (busybox 1.37.0) started, log level 8
+crond: crond (busybox 1.37.0) started, log level 8
+crond: USER root pid 2095 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid 2479 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid 2635 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid 3060 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid 3061 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid 3062 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid 3063 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid 3064 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid 3065 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid 3066 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid 3067 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid 3068 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid 3069 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid 3070 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
+crond: USER root pid 3071 cmd /app/newsbot tg_publish >> /var/log/publish.log 2>&1
+/bin/sh: redir error
+crond: USER root pid 3072 cmd /app/newsbot fetch_news >> /var/log/fetch.log 2>&1
+/bin/sh: redir error
