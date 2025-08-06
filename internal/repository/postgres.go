@@ -124,6 +124,6 @@ func (r *PostgresNewsRepository) GetUnpublished() ([]*domain.News, error) {
 }
 
 func (r *PostgresNewsRepository) MarkAsPublished(id int64) error {
-	_, err := r.db.Exec("UPDATE news SET is_published = true WHERE id = ?", id)
+	_, err := r.db.Exec("UPDATE news SET is_published = true WHERE id = $1", id)
 	return err
 }
